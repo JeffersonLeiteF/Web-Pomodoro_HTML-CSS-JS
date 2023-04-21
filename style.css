@@ -1,0 +1,21 @@
+:root {
+    font-size: 62.5%; /* 1rem = 16px */
+    --color-primary: #1f2241;
+    --color-secondary: #ee7276;
+    --color-font: #ffffffe6;
+
+
+    --color-shadow: #393e79;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--color-primary);
+    font-size: 1.6rem;
+}
