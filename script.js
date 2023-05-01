@@ -18,6 +18,10 @@ window.onload = () => {
 
 //Start Timer
 function start() {
+    //Mudar o botão
+    document.getElementById('start').style.display = "none";
+    document.getElementById('reset').style.display = "block";
+
     // Mudar o tempo
     seconds = 59;
 
@@ -32,26 +36,34 @@ function start() {
         document.getElementById('minutes').innerHTML = workMinutes;
         document.getElementById('seconds').innerHTML = seconds;
 
-        //mudar o timer
+        // começar
         seconds = seconds - 1;
 
         if (seconds === 0) {
-            workMinutes = workMinutes -1;
+            workMinutes = workMinutes - 1;
             if(workMinutes === -1){
                 if(breakCount % 2 === 0) {
                     // Começar Break
                     workMinutes = breakMinutes;
                     breakCount++
+
+                    //Mudar o painel
+                    workTittle.classList.remove('active');
+                    breakTittle.classList.add('active');
                 }else {
                     //Continuar Work
-                    workMinutes =workTime;
+                    workMinutes = workTime;
                     breakCount++
+
+                    //Mudar o painel
+                    breakTittle.classList.remove('active');
+                    workTittle.classList.add('active');
+                    
                 }
             }
             seconds = 59;
         }
-    
+    }
     //Start Countdown
     setInterval(timerFunction, 1000); //1000= 1s
-    }
 }
