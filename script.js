@@ -18,6 +18,14 @@ window.onload = () => {
 
 //Start Timer
 function start() {
+
+/* --------------- ChatGPT -------------------------- */    
+    const workTimeInput = document.getElementById('work-time');
+    const breakTimeInput = document.getElementById('break-time');
+    workTime = parseInt(workTimeInput.value);
+    breakTime = parseInt(breakTimeInput.value);
+/* --------------- ChatGPT -------------------------- */    
+
     //Mudar o botão
     document.getElementById('start').style.display = "none";
     document.getElementById('reset').style.display = "block";
