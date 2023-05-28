@@ -23,7 +23,8 @@ html, body {
 
 p,
 i,
-h1 {
+h1,
+.Time-Selector {
     color: var(--color-font);
 }
 
@@ -128,4 +129,34 @@ section {
 
 .controls #reset {
     display: none;
+}
+
+.Time-Selector{
+    width: min(60rem, 100%);
+    margin-inline: auto;
+    margin-top: -19rem;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Time-Selector label{
+    font-size: 2rem;
+    margin: 1rem;
+}
+.Time-Selector input{
+    background-color: var(--color-primary);
+    color: var(--color-font);
+    border-style: solid;
+    border-color: var(--color-secondary);
+    border-width: 1px;
+    padding: 0.3rem;
+    box-shadow: none;
+    border-radius: 10rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0.2rem;
+    margin-right: 2rem;
 }
