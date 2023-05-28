@@ -16,15 +16,25 @@ window.onload = () => {
     workTittle.classList.add('active');
 }
 
+/* --------------- ChatGPT -------------------------- */    
+const workTimeInput = document.getElementById('work-time');
+const breakTimeInput = document.getElementById('break-time');
+
+workTimeInput.addEventListener('change', () => {
+    workTime = parseInt(workTimeInput.value);
+    document.getElementById('minutes').innerHTML = workTime;
+});
+
+breakTimeInput.addEventListener('change', () => {
+    breakTime = parseInt(breakTimeInput.value);
+});
+/* --------------- ChatGPT -------------------------- */    
+
 //Start Timer
 function start() {
 
-/* --------------- ChatGPT -------------------------- */    
-    const workTimeInput = document.getElementById('work-time');
-    const breakTimeInput = document.getElementById('break-time');
     workTime = parseInt(workTimeInput.value);
     breakTime = parseInt(breakTimeInput.value);
-/* --------------- ChatGPT -------------------------- */    
 
     //Mudar o botão
     document.getElementById('start').style.display = "none";
